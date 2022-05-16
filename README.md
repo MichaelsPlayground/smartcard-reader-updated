@@ -1,5 +1,7 @@
 ### smartcard-reader
 
+forked from: https://github.com/doc-rj/smartcard-reader
+
 smartcard-reader turns your Android device (running Kitkat or later) into a
 payment terminal or similar smartcard reader. It uses NFC to interact with a
 contactless smartcard, either physical or emulated.
