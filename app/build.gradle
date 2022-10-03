@@ -9,7 +9,7 @@ android {
         versionCode 142
         versionName "1.4.2"
 
-        minSdkVersion 19
+        minSdkVersion 21
         targetSdkVersion 32
     }
 
@@ -25,9 +25,8 @@ android {
 }
 
 dependencies {
-    compile "com.android.support:support-v4:$supportlib_version"
-    compile "com.android.support:appcompat-v7:$supportlib_version"
-    compile 'com.google.code.gson:gson:2.8.0'
-    compile 'com.github.clans:fab:1.4.0'
-    compile 'com.github.afollestad.material-dialogs:core:0.8.6.0'
+    implementation 'androidx.appcompat:appcompat:1.5.1'
+    implementation 'com.google.code.gson:gson:2.8.0'
+    implementation 'com.github.clans:fab:1.4.0'
+    implementation 'com.afollestad.material-dialogs:core:3.3.0'
 }
