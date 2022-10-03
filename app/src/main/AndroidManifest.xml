@@ -18,7 +18,8 @@
         <activity
             android:name=".LaunchActivity"
             android:label="@string/app_name"
-            android:theme="@android:style/Theme.NoDisplay" >
+            android:theme="@android:style/Theme.NoDisplay"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -42,7 +43,8 @@
         <activity
             android:name=".FileShareActivity"
             android:label="@string/log_to_file"
-            android:theme="@android:style/Theme.NoDisplay" >
+            android:theme="@android:style/Theme.NoDisplay"
+            android:exported="false">
             <intent-filter android:priority="999" >
                 <action android:name="android.intent.action.SEND" />
                 <category android:name="android.intent.category.DEFAULT" />

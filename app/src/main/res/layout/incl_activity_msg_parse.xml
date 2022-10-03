@@ -8,7 +8,7 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:background="@color/bg_window"
-    tools:context="org.docrj.smartcard.reader.MsgParseActivity">
+    tools:context=".MsgParseActivity">
 
     <TextView
         android:layout_width="match_parent"

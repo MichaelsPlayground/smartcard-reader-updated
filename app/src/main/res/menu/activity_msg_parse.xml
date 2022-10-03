@@ -5,9 +5,7 @@
     tools:context="org.docrj.smartcard.reader.MsgParseActivity">
 
     <item android:id="@+id/menu_share_msgs"
-        android:showAsAction="always"
         app:showAsAction="always"
         android:title="@string/share_msgs"
-        android:actionProviderClass="android.widget.ShareActionProvider"
-        app:actionProviderClass="android.support.v7.widget.ShareActionProvider" />
+        app:actionProviderClass="androidx.appcompat.widget.ShareActionProvider" />
 </menu>

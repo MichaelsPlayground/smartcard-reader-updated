@@ -39,11 +39,6 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Vibrator;
 import android.preference.PreferenceManager;
-import android.support.v4.view.MenuItemCompat;
-import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.ShareActionProvider;
-import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.ViewGroup;
 import android.view.animation.AnimationUtils;
@@ -59,6 +54,12 @@ import android.widget.ListView;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.ViewSwitcher;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.ShareActionProvider;
+import androidx.appcompat.widget.Toolbar;
+import androidx.core.view.MenuItemCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
 
 import com.afollestad.materialdialogs.AlertDialogWrapper;
 import com.google.gson.Gson;
@@ -337,6 +338,7 @@ public class AppSelectActivity extends AppCompatActivity implements ReaderXcvr.U
 
     @Override
     protected void onSaveInstanceState(Bundle outstate) {
+        super.onSaveInstanceState(outstate);
         mNavDrawer.onSaveInstanceState(outstate);
         mConsole.onSaveInstanceState(outstate);
     }

@@ -10,7 +10,7 @@
     android:focusableInTouchMode="true"
     android:animateLayoutChanges="false"
     android:background="@color/bg_window"
-    tools:context=".AidRouteActivity" >
+    tools:context=".AppSelectActivity" >
 
     <TextView
         android:id="@+id/intro"

@@ -30,8 +30,9 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.text.Html;
 import android.widget.ListView;
-import android.support.v7.widget.ShareActionProvider;
 import android.widget.ViewSwitcher;
+
+import androidx.appcompat.widget.ShareActionProvider;
 
 public class Console implements MessageAdapter.UiCallbacks {
 

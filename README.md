@@ -2,6 +2,13 @@
 
 forked from: https://github.com/doc-rj/smartcard-reader
 
+Note: the original app was last updated in 2017 and I updated the project so that it now runs 
+with Java 11 and Android SDK 32, using Gradle 7.4. If you run the project in Android Studio you  
+may see that the dependency "com.afollestad.material-dialogs:core:0.8.6.2" is outdated -  
+please do not update to newer ones or you are forced to find a new solution for the 
+AlertDialogWrapper classed that was removed in later versions. The app is running on a real device 
+(Samsung A51) and Android SDK 12.
+
 smartcard-reader turns your Android device (running Kitkat or later) into a
 payment terminal or similar smartcard reader. It uses NFC to interact with a
 contactless smartcard, either physical or emulated.

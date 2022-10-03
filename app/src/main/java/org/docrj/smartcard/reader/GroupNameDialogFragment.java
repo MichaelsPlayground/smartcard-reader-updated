@@ -36,6 +36,7 @@ import android.widget.EditText;
 
 import com.afollestad.materialdialogs.AlertDialogWrapper;
 
+
 /**
  * superclass for creating and renaming groups.
  */

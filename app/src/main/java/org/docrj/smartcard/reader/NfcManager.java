@@ -35,6 +35,7 @@ import android.view.LayoutInflater;
 
 import com.afollestad.materialdialogs.AlertDialogWrapper;
 
+
 public class NfcManager {
 
     private static final String TAG = LaunchActivity.TAG;

@@ -1,10 +1,10 @@
 /*
  * Copyright 2014 Ryan Jones
  * Copyright 2010 sasc
- * 
+ *
  * This file was modified from the original source:
  * https://code.google.com/p/javaemvreader/
- * 
+ *
  * This file is part of smartcard-reader, package org.docrj.smartcard.reader.
  *
  * smartcard-reader is free software: you can redistribute it and/or modify
@@ -40,9 +40,9 @@ import java.util.StringTokenizer;
 /**
  * ISO 4217
  * ISO 3-digit Currency Code
- *
+ * <p>
  * http://www.iso.org/iso/support/faqs/faqs_widely_used_standards/widely_used_standards_other/currency_codes/currency_codes_list-1.htm
- *
+ * <p>
  * java.util.Currency is pretty useless in java 1.6. Must wait for java 1.7 to get the methods:
  * getDisplayName()
  * getNumericCode()
@@ -113,11 +113,19 @@ public class ISO4217_Numeric {
             //We have no country! Might find more than 1 match
             for (Locale l : Locale.getAvailableLocales()) {
                 if (l.getLanguage().equals(locale.getLanguage()) && l.getCountry() != null && l.getCountry().length() == 2) {
-                    String currencyCode = java.util.Currency.getInstance(l).getCurrencyCode();
-                    codeList.add(ISO4217_Numeric.getNumericCodeForCurrencyCode(currencyCode));
+                    // ### new implemented a null exception check
+                    try {
+                        // just a dummy to force the exception
+                        String currencyCode = java.util.Currency.getInstance(l).getCurrencyCode();
+                        String dummy = String.valueOf(ISO4217_Numeric.getNumericCodeForCurrencyCode(currencyCode));
+                        codeList.add(ISO4217_Numeric.getNumericCodeForCurrencyCode(currencyCode));
+                    } catch (IllegalArgumentException e) {
+                        System.out.println(e);
+                    }
+                    // codeList.add(ISO4217_Numeric.getNumericCodeForCurrencyCode(currencyCode));
                 }
             }
-        }else if (locale.getCountry() != null && locale.getCountry().length() == 2) {
+        } else if (locale.getCountry() != null && locale.getCountry().length() == 2) {
             String currencyCode = java.util.Currency.getInstance(locale).getCurrencyCode();
             codeList.add(ISO4217_Numeric.getNumericCodeForCurrencyCode(currencyCode));
         }

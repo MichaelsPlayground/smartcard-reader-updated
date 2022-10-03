@@ -32,11 +32,7 @@ import android.nfc.tech.IsoDep;
 import android.os.Bundle;
 import android.os.Vibrator;
 import android.preference.PreferenceManager;
-import android.support.v4.view.MenuItemCompat;
-import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.ShareActionProvider;
-import android.support.v7.widget.Toolbar;
+
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -46,6 +42,13 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.Spinner;
 import android.widget.ViewSwitcher;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.ShareActionProvider;
+import androidx.appcompat.widget.Toolbar;
+import androidx.core.view.MenuItemCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
+
 
 import com.afollestad.materialdialogs.AlertDialogWrapper;
 import com.google.gson.Gson;
@@ -268,6 +271,7 @@ public class BatchSelectActivity extends AppCompatActivity implements ReaderXcvr
 
     @Override
     protected void onSaveInstanceState(Bundle outstate) {
+        super.onSaveInstanceState(outstate);
         mNavDrawer.onSaveInstanceState(outstate);
         mConsole.onSaveInstanceState(outstate);
     }

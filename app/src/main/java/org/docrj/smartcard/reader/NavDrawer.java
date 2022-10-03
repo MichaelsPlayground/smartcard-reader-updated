@@ -24,12 +24,15 @@ import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.os.Handler;
-import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.ActionBarDrawerToggle;
-import android.support.v7.widget.Toolbar;
+
 import android.view.Gravity;
 import android.view.MenuItem;
 import android.view.View;
+
+import androidx.appcompat.app.ActionBarDrawerToggle;
+import androidx.appcompat.widget.Toolbar;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
 
 public class NavDrawer {
     private Activity mActivity;
@@ -85,7 +88,7 @@ public class NavDrawer {
 
         if (inState != null) {
             if (inState.getBoolean("drawer_open")) {
-                drawerLayout.openDrawer(Gravity.START|Gravity.LEFT);
+                drawerLayout.openDrawer(GravityCompat.START|Gravity.LEFT);
             }
         }
     }
@@ -106,7 +109,7 @@ public class NavDrawer {
     }
 
     public boolean onBackPressed() {
-        if (mDrawerLayout.isDrawerOpen(Gravity.START|Gravity.LEFT)) {
+        if (mDrawerLayout.isDrawerOpen(GravityCompat.START|Gravity.LEFT)) {
             mDrawerLayout.closeDrawers();
             return true;
         }
@@ -118,7 +121,7 @@ public class NavDrawer {
     }
 
     public boolean isOpen() {
-        return mDrawerLayout.isDrawerOpen(Gravity.START|Gravity.LEFT);
+        return mDrawerLayout.isDrawerOpen(GravityCompat.START|Gravity.LEFT);
     }
 
     private final View.OnClickListener mClickListener = new View.OnClickListener() {
